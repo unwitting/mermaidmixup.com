@@ -1,17 +1,13 @@
-# Astro Starter Kit: Portfolio
+# mermaidmixup.com
 
-```
-npm init astro -- --template portfolio
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This site was built with astro.
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
 | Command         | Action                                      |
-|:----------------|:--------------------------------------------|
+| :-------------- | :------------------------------------------ |
 | `npm install`   | Installs dependencies                       |
 | `npm start`     | Starts local dev server at `localhost:3000` |
 | `npm run build` | Build your production site to `./dist/`     |
