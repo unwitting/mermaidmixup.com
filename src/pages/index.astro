@@ -1,15 +1,8 @@
 ---
 import HeroWithContent from '../layouts/HeroWithContent'
-
-import MainHead from '../components/MainHead.astro';
-import IndexPageHeroContent from '../components/IndexPageHeroContent'
+import IndexPageHeroContent from '../components/pagecontent/IndexPageHeroContent.astro'
 ---
-<html lang="en">
-  <head>
-    <MainHead title="LGBTQ+ stickers and badges | MermaidMixup" />
-  </head>
-  <body>
-    <HeroWithContent>
-      <IndexPageHeroContent />
-    </HeroWithContent>
-</html>
+
+<HeroWithContent title="LGBTQ+ stickers and badges | MermaidMixup">
+  <IndexPageHeroContent />
+</HeroWithContent>

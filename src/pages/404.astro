@@ -1,15 +1,8 @@
 ---
 import HeroWithContent from '../layouts/HeroWithContent'
-
-import MainHead from '../components/MainHead.astro';
-import NotFoundPageHeroContent from '../components/NotFoundPageHeroContent'
+import NotFoundPageHeroContent from '../components/pagecontent/NotFoundPageHeroContent.astro'
 ---
-<html lang="en">
-  <head>
-    <MainHead title="Page not found | LGBTQ+ stickers and badges | MermaidMixup" />
-  </head>
-  <body>
-    <HeroWithContent>
-      <NotFoundPageHeroContent />
-    </HeroWithContent>
-</html>
+
+<HeroWithContent title="Page not found | LGBTQ+ stickers and badges | MermaidMixup">
+  <NotFoundPageHeroContent />
+</HeroWithContent>
