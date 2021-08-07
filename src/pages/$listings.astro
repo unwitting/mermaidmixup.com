@@ -2,6 +2,7 @@
 import marked from 'marked'
 
 import PlainPage from '../layouts/PlainPage'
+import ToolbarHeader from '../components/ToolbarHeader.astro'
 import { getActiveListings } from '../utils/etsy'
 
 export async function createCollection() {
@@ -28,17 +29,6 @@ const listingJSON = JSON.stringify(listing, null, 2)
 ---
 
 <style lang="scss">
-.header {
-  padding: 2rem;
-  border-bottom: 1px solid grey;
-  font-size: 1.4rem;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-}
-
 .listing-image-container {
   text-align: center;
   margin-top: 5rem;
@@ -74,9 +64,7 @@ const listingJSON = JSON.stringify(listing, null, 2)
 </style>
 
 <PlainPage title={`${listing.title} | LGBTQ+ stickers and badges | MermaidMixup`}>
-  <header class="header">
-    <a href="/">MermaidMixup</a>
-  </header>
+  <ToolbarHeader />
   <main class="container">
     <div class="listing-image-container">
       <img class="listing-image" style={`border-color: #${listing.images[0].hex_code};`} src={listing.images[0].url_fullxfull} />
