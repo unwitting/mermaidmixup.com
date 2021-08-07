@@ -1,9 +1,9 @@
 import dotenv from "dotenv";
 import fs from "fs";
 
-const {
-  parsed: { ETSY_API_KEY, ETSY_SHOP_ID, ETSY_USE_DEMO_DATA },
-} = dotenv.config();
+dotenv.config();
+
+const { ETSY_API_KEY, ETSY_SHOP_ID, ETSY_USE_DEMO_DATA } = process.env;
 
 let activeListingsCache = null;
 
