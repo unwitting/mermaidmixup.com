@@ -7,7 +7,9 @@
     "build": "astro build"
   },
   "devDependencies": {
+    "@astrojs/renderer-preact": "^0.2.1",
     "astro": "^0.18.8",
-    "@astrojs/renderer-preact": "^0.2.1"
+    "dotenv": "^10.0.0",
+    "marked": "^2.1.3"
   }
 }
