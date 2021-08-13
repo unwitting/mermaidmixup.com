@@ -27,7 +27,9 @@ const getActiveListings = async () => {
       `https://openapi.etsy.com/v3/application/shops/${ETSY_SHOP_ID}/listings/${listing.listing_id}/images?client_id=${ETSY_API_KEY}`
     );
     const { count, results: images } = await imageResp.json();
-    console.log(`Got ${count} images for listing ${listing.listing_id}`);
+    console.log(
+      `Got ${count} images for listing ${listing.listing_id} (${listing.title})`
+    );
     listing.images = images;
   }
 
