@@ -1,15 +1,17 @@
 ---
 import PlainPage from '../layouts/PlainPage'
 import ToolbarHeader from '../components/ToolbarHeader.astro'
-import { getActiveListings } from '../utils/etsy'
 
-const activeListings = await getActiveListings()
+import { activeListings } from '../utils/etsy'
+
+activeListings.init()
+const listings = await activeListings.get()
 ---
 
 <PlainPage>
   <ToolbarHeader />
 
   <ul>
-    {activeListings.map(listing => <li><a href={`/listings/${listing.listing_id}`}>{listing.title}</a></li>)}
+    {listings.map(listing => <li><a href={`/listings/${listing.listing_id}`}>{listing.title}</a></li>)}
   </ul>
 </PlainPage>

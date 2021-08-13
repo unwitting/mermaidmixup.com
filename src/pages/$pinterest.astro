@@ -1,9 +1,11 @@
 ---
-import { getActiveListings } from '../utils/etsy'
+import { activeListings } from '../utils/etsy'
 
 export async function createCollection() {
   console.log('Generating $pinterest RSS collection')
-  const listings = await getActiveListings();
+
+  activeListings.init()
+  const listings = await activeListings.get()
 
   return {
     paginate: true,

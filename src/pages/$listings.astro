@@ -3,12 +3,15 @@ import marked from 'marked'
 
 import PlainPage from '../layouts/PlainPage'
 import ToolbarHeader from '../components/ToolbarHeader.astro'
-import { getActiveListings } from '../utils/etsy'
+
+import { activeListings } from '../utils/etsy'
 
 export async function createCollection() {
   console.log('Generating $listings collection')
-  const listings = await getActiveListings();
-  console.log(`Got ${listings.length} active listings from Etsy`)
+
+  activeListings.init()
+  const listings = await activeListings.get()
+
   return {
     route: `/listings/:id`,
     paths() {
