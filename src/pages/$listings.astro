@@ -10,7 +10,7 @@ export async function createCollection() {
   const listings = await getActiveListings();
   console.log(`Got ${listings.length} active listings from Etsy`)
   return {
-    route: `/listings/:id`, // TODO slug
+    route: `/listings/:id`,
     paths() {
       return listings.map((listing) => ({
         params: { id: listing.listing_id },

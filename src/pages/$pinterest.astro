@@ -1,0 +1,31 @@
+---
+import { getActiveListings } from '../utils/etsy'
+
+export async function createCollection() {
+  const listings = await getActiveListings();
+
+  return {
+    paginate: true,
+    route: '/pinterest/:page?',
+    async props({ paginate }) {
+      return {
+        items: paginate(listings, { pageSize: 1000 })
+      }
+    },
+    rss: {
+      title: 'MermaidMixup Pinterest Feed',
+      description: 'RSS feed of MermaidMixup products for use by Pinterest in auto-creating pins',
+
+      item: (item) => {
+        // console.log(item)
+        return {
+          title: item.title,
+          description: item.description,
+          link: `/listings/${item.listing_id}`,
+          customData: `<image><link>${Astro.site}</link><url>${item.images[0].url_fullxfull}</url><title>${item.title}</title></image>`
+        }
+      }
+    }
+  }
+}
+---
