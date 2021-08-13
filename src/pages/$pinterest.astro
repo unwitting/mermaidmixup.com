@@ -2,6 +2,7 @@
 import { getActiveListings } from '../utils/etsy'
 
 export async function createCollection() {
+  console.log('Generating $pinterest RSS collection')
   const listings = await getActiveListings();
 
   return {

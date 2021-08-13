@@ -13,10 +13,6 @@ export const getActiveListings = async () => {
     return activeListingsCache;
   }
 
-  if (ETSY_USE_DEMO_DATA === "1") {
-    return JSON.parse(fs.readFileSync("src/data/etsy_listings_demo_data.json"));
-  }
-
   const resp = await fetch(
     `https://openapi.etsy.com/v3/application/shops/${ETSY_SHOP_ID}/listings/active?client_id=${ETSY_API_KEY}`
   );
