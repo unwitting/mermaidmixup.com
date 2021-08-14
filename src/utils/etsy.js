@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import fs from "fs";
 import wait from "wait";
 
 dotenv.config();
