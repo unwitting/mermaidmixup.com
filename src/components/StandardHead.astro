@@ -1,5 +1,10 @@
 ---
+import GA from './GA.astro'
+import dotenv from "dotenv";
+dotenv.config();
+
 const { title } = Astro.props;
+const { GA_MEASUREMENT_ID } = process.env
 ---
 
 <meta charset="UTF-8">
@@ -10,3 +15,5 @@ const { title } = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
 
 <meta name="p:domain_verify" content="6dd1d53684209766cc6a0a735c6e9362"/>
+
+{ GA_MEASUREMENT_ID && <GA measurementID={GA_MEASUREMENT_ID} /> }
