@@ -1,3 +1,11 @@
 [build]
     command = "npm run build"
     publish = "_site/"
+    environment = {
+        MERMAID_MIXUP_ENVIRONMENT = "development"
+    }
+
+[context.production]
+    environment = {
+        MERMAID_MIXUP_ENVIRONMENT = "production"
+    }
