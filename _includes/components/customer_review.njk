@@ -1,0 +1,11 @@
+{% macro customer_review(review_text, customer_name, style='success', num_stars=5) -%}
+    <div class="message is-{{ style }}">
+        <div class="message-body">
+            <p class="mb-3">
+                {% for i in range(0, num_stars) -%}★{%- endfor %}
+            </p>
+            <p>"{{ review_text }}"</p>
+            <p class="has-text-right mt-3">- {{ customer_name }}</p>
+        </div>
+    </div>
+{%- endmacro %}

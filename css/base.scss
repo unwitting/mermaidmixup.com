@@ -1,0 +1,16 @@
+$blue-green: #0b93c1ff;
+$sky-blue-crayola: #74e3fbff;
+$mint-green: #75fa92ff;
+$cyber-yellow: #f8d112ff;
+$french-raspberry: #c33149ff;
+
+$primary: $blue-green;
+$info: $sky-blue-crayola;
+$success: $mint-green;
+$warning: $cyber-yellow;
+$danger: $french-raspberry;
+
+$section-padding: 1.5rem; // Default 3rem 1.5rem
+$section-padding-desktop: 2.5rem; // Default 3rem 3rem
+
+@import "../node_modules/bulma/bulma.sass";

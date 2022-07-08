@@ -1,0 +1,18 @@
+---
+baseTitle: MermaidMixup
+title: ""
+---
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include "../components/seo_meta.njk" %}
+        <link rel="stylesheet" href="/css/base.css">
+    </head>
+    <body class="has-navbar-fixed-top">
+        {% include "../components/navbar.njk" %}
+        {% include "../components/banner_image.njk" %}
+        {{ content|safe}}
+        {% include "../components/footer.njk" %}
+    </body>
+</html>
