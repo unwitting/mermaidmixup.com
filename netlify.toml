@@ -3,10 +3,10 @@
     publish = "_site/"
     environment = { MERMAID_MIXUP_ENVIRONMENT = "development" }
 
-[context.deploy-preview]
+[context.deploy-preview.environment]
     MERMAID_MIXUP_ENVIRONMENT = "production-preview"
 
-[context.branch-deploy]
+[context.branch-deploy.environment]
     MERMAID_MIXUP_ENVIRONMENT = "production-preview"
 
 [context.production.environment]
