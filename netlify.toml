@@ -1,7 +1,8 @@
 [build]
     command = "npm run build"
     publish = "_site/"
-    environment = { MERMAID_MIXUP_ENVIRONMENT = "development" }
+[build.environment]
+    MERMAID_MIXUP_ENVIRONMENT = "development"
 
 [context.deploy-preview.environment]
     MERMAID_MIXUP_ENVIRONMENT = "production-preview"

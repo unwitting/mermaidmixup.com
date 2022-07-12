@@ -1,5 +1,6 @@
-import dotenv from "dotenv";
-import wait from "wait";
+const dotenv = require("dotenv");
+const wait = require("wait");
+const fetch = require("node-fetch");
 
 dotenv.config();
 
@@ -40,7 +41,7 @@ const getActiveListings = async () => {
   return listings;
 };
 
-export const activeListings = {
+const activeListings = {
   cache: null,
   running: false,
   init() {
@@ -60,3 +61,5 @@ export const activeListings = {
     return this.cache;
   },
 };
+
+module.exports = { activeListings };

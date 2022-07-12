@@ -1,0 +1,11 @@
+---
+layout: 'layouts/base.njk'
+pagination:
+    data: listings
+    size: 1
+    alias: listing
+    addAllPagesToCollections: true
+permalink: "/listings/{{ listing.listing_id }}/"
+---
+
+{{ listing.listing_id }}
