@@ -1,8 +1,6 @@
-const { activeListings } = require("../src/utils/etsy");
-
-activeListings.init();
+const { getActiveListings } = require("../src/utils/etsy");
 
 module.exports = async () => {
-  const listings = await activeListings.get();
+  const listings = await getActiveListings();
   return { listings };
 };
