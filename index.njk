@@ -1,0 +1,35 @@
+---
+layout: 'layouts/base.njk'
+title: Pay-what-you-can LGBTQ+ stickers, badges and pins
+---
+
+{%- from "components/customer_review.njk" import customer_review -%}
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-1 is-size-3-mobile">MermaidMixup</h1>
+            <p class="subtitle is-3 is-size-5-mobile">Pay-what-you-can LGBTQ+ stickers, badges and lovely things</p>
+
+            <p>Welcome to the mixup! MermaidMixup is a shop with a simple goal: pretty, queer things with accessible pricing. Everything is designed by Juniper, a trans woman in Edinburgh, Scotland.</p>
+
+            {{ customer_review('Lovely stickers for those who are keeping things on the down-low 💕', 'ayrees') }}
+
+            <h2 class="title is-2 is-size-4-mobile">Pay-what-you-can</h2>
+            <p>Things work a little differently here. Everything we sell comes with <strong>three price points</strong> and <strong>zero judgement</strong>.</p>
+            <p>Can't afford much? Choose the "pay less" option, no questions asked. All we ask is that you exercise your honesty and choose the "standard" option if you can afford it: this helps keep MermaidMixup accessible for everybody.</p>
+            <p>And if you really fancy it, you can choose the "treat me to a coffee" price, which puts a smile on my face and funds more time spent creating cool new things for the shop.</p>
+            <p>
+                <a href="/pay-what-you-can">Find out more about our pay-what-you-can pricing &gt;</a>
+            </p>
+
+            <h2 class="title is-2 is-size-4-mobile">Shop now</h2>
+            <p>Interested? Browse all the products in the store.</p>
+            <p>
+                <a class="button is-primary" href="{{ urls.etsy.indexPage }}">Shop MermaidMixup on Etsy</a>
+            </p>
+
+            {{ customer_review('Such a unique and fun sticker idea! Really high quality too 🙂', 'Emry', 'info') }}
+        </div>
+    </div>
+</section>

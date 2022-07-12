@@ -1,0 +1,60 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/images/logo/navbar.png" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mermaidmixup-navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="mermaidmixup-navbar" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">Home</a>
+            {# <a class="navbar-item" href="">TODO</a>
+            <a class="navbar-item" href="">TODO</a> #}
+
+            {# <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">More</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="">TODO</a>
+                    <a class="navbar-item" href="">TODO</a>
+                </div>
+            </div> #}
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="{{ urls.etsy.navbar }}">
+                        <strong>Shop on Etsy</strong>
+                    </a>
+                    {# <a class="button is-light">TODO</a> #}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document
+            .querySelectorAll('.navbar-burger')
+            .forEach(el => {
+                el.addEventListener('click', () => {
+                    const targetID = el.dataset.target;
+                    const target = document.getElementById(targetID);
+
+                    el
+                        .classList
+                        .toggle('is-active');
+                    target
+                        .classList
+                        .toggle('is-active');
+                });
+            });
+    });
+</script>
