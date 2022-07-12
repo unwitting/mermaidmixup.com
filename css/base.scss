@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
+
 $blue-green: #0b93c1ff;
 $sky-blue-crayola: #74e3fbff;
 $mint-green: #75fa92ff;
@@ -12,5 +14,8 @@ $danger: $french-raspberry;
 
 $section-padding: 1.5rem; // Default 3rem 1.5rem
 $section-padding-desktop: 2.5rem; // Default 3rem 3rem
+
+$body-font-size: 1.15rem;
+$family-primary: "Manrope", sans-serif;
 
 @import "../node_modules/bulma/bulma.sass";
