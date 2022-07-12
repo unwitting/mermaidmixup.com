@@ -1,8 +1,6 @@
 const { isProduction, isDevelopment, isProductionPreview } =
   require("./environment")();
 
-console.log(isDevelopment);
-
 const getProtocol = () => {
   if (isProduction) {
     return "https";
