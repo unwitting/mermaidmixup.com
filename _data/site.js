@@ -1,6 +1,8 @@
 const { isProduction, isDevelopment, isProductionPreview } =
   require("./environment")();
 
+const getProductionPreviewDeployURL = () => process.env.DEPLOY_PRIME_URL;
+
 const getProtocol = () => {
   if (isProduction) {
     return "https";
@@ -9,7 +11,7 @@ const getProtocol = () => {
     return "http";
   }
   if (isProductionPreview) {
-    const url = new URL(process.env.DEPLOY_URL);
+    const url = new URL(getProductionPreviewDeployURL());
     return url.protocol.slice(0, -1);
   }
 };
@@ -22,7 +24,7 @@ const getDomain = () => {
     return "localhost:8080";
   }
   if (isProductionPreview) {
-    const url = new URL(process.env.DEPLOY_URL);
+    const url = new URL(getProductionPreviewDeployURL());
     return url.hostname;
   }
 };
@@ -31,7 +33,7 @@ const getBaseURL = () => {
   if (!isProductionPreview) {
     return `${getProtocol()}://${getDomain()}`;
   }
-  return process.env.DEPLOY_URL;
+  return getProductionPreviewDeployURL();
 };
 
 module.exports = () => ({
