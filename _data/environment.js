@@ -1,4 +1,5 @@
 const ENVIRONMENT = process.env.MERMAID_MIXUP_ENVIRONMENT || "development";
+console.log(`MERMAID_MIXUP_ENVIRONMENT: ${ENVIRONMENT}`);
 
 module.exports = () => ({
   environment: ENVIRONMENT,

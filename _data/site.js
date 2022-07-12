@@ -42,4 +42,4 @@ module.exports = () => ({
   baseURL: getBaseURL(),
 });
 
-console.log(module.exports());
+console.log(`Site base URL configured as: ${module.exports().baseURL}`);
