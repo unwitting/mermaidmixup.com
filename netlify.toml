@@ -4,6 +4,8 @@
     environment = { MERMAID_MIXUP_ENVIRONMENT = "development" }
 
 [context.deploy-preview]
+    MERMAID_MIXUP_ENVIRONMENT = "production-preview"
+
 [context.branch-deploy]
     MERMAID_MIXUP_ENVIRONMENT = "production-preview"
 
