@@ -1,0 +1,32 @@
+---
+layout: 'layouts/base.njk'
+pagination:
+    data: listings
+    size: 1
+    alias: listing
+    addAllPagesToCollections: true
+permalink: "/listings/{{ listing.listing_id }}/"
+---
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-1 is-size-3-mobile">{{ listing.title }}</h1>
+            <p class="subtitle is-3 is-size-5-mobile">Pay-what-you-can at MermaidMixup</p>
+
+            <div class="columns">
+                <div class="column is-one-third">
+                    <img src="{{ listing.images[0].url_570xN }}">
+                </div>
+                <div class="column">
+                    <p>{{ listing.description | markdown | safe }}</p>
+                    <p class="mt-5">
+                        <a class="button is-primary is-large" href="{{ listing.url }}?utm_source=mermaidmixup.com&utm_medium=referral&utm_campaign=mermaidmixup-listing-page&utm_content={{ listing.listing_id }}">Buy on Etsy</a>
+                    </p>
+                </div>
+            </div>
+
+            {% include "components/pay_what_you_can_snippet.njk" %}
+        </div>
+    </div>
+</section>
