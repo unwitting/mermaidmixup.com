@@ -14,11 +14,17 @@ permalink: "/listings/{{ listing.listing_id }}/"
             <h1 class="title is-1 is-size-3-mobile">{{ listing.title }}</h1>
             <p class="subtitle is-3 is-size-5-mobile">Pay-what-you-can at MermaidMixup</p>
 
-            <p>{{ listing.description | markdown | safe }}</p>
-
-            <p>
-                <a class="button is-primary is-large" href="{{ listing.url }}">Buy on Etsy</a>
-            </p>
+            <div class="columns">
+                <div class="column is-one-third">
+                    <img src="{{ listing.images[0].url_570xN }}">
+                </div>
+                <div class="column">
+                    <p>{{ listing.description | markdown | safe }}</p>
+                    <p>
+                        <a class="button is-primary is-large" href="{{ listing.url }}">Buy on Etsy</a>
+                    </p>
+                </div>
+            </div>
 
             {% include "components/pay_what_you_can_snippet.njk" %}
         </div>
