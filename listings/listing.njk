@@ -20,8 +20,8 @@ permalink: "/listings/{{ listing.listing_id }}/"
                 </div>
                 <div class="column">
                     <p>{{ listing.description | markdown | safe }}</p>
-                    <p>
-                        <a class="button is-primary is-large" href="{{ listing.url }}">Buy on Etsy</a>
+                    <p class="mt-5">
+                        <a class="button is-primary is-large" href="{{ listing.url }}?utm_source=mermaidmixup.com&utm_medium=referral&utm_campaign=mermaidmixup-listing-page&utm_content={{ listing.listing_id }}">Buy on Etsy</a>
                     </p>
                 </div>
             </div>
