@@ -14,3 +14,4 @@
 
 [context.production.environment]
     MERMAID_MIXUP_ENVIRONMENT = "production"
+    GA_MEASUREMENT_ID = "G-2XJSSK6HNY"
