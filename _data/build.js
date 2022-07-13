@@ -1,8 +1,12 @@
+const NOW = new Date();
+
 const currentYear = () => {
-  const today = new Date();
-  return today.getFullYear();
+  return NOW.getFullYear();
 };
 
 module.exports = () => ({
   year: currentYear(),
+  datetime: {
+    rfc822: NOW.toUTCString(),
+  },
 });
