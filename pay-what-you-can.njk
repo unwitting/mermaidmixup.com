@@ -1,0 +1,40 @@
+---
+layout: 'layouts/base.njk'
+title: Pay-what-you-can pricing
+description: Our stickers and pins are priced a little differently. Pay only what you can afford, with zero judgement.
+ogType: article
+---
+
+{%- from "components/customer_review.njk" import customer_review -%}
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-1 is-size-3-mobile">Pay-what-you-can pricing</h1>
+            <p class="subtitle is-3 is-size-4-mobile">Pay only what you can afford, with zero judgement</p>
+
+            <p>Since 2022, MermaidMixup runs on a <strong>pay-what-you-can</strong> basis. This means that every item in store has three prices for you to choose from.</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Standard price</h2>
+            <p>"Standard price" is the option I'd ask that you choose if you can afford it, covering my costs and some profit margin to allow me to continue creating new things and running the shop more full-time.</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Pay less</h2>
+            <p>"Pay less" is for those currently not able to afford the standard pricing: it usually covers the costs of production and postage / packaging, and not more.</p>
+            <p>If this is you then please have no hesitation in using it. Honestly, it's fine!</p>
+            <p>You get the same product as anybody else would, in the same packaging, with the same care taken.</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Treat me to a coffee</h2>
+            <p>"Treat me to a coffee" does what it says it does: this is the standard price, plus a little extra tip to help encourage me and fund some creative time in which I can make more lovely stuff.</p>
+            <p>It's really appreciated every single time, and you should know it puts a smile on my face!</p>
+            <p>This tier also helps cover the business overheads and design time that isn't accounted for in the "Pay less" price, so by choosing it you help to keep the more accessible prices possible for others.</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Shop now</h2>
+            <p>Hopefully this puts your mind at ease. Choose the price that best fits you and don't worry: there will always be zero judgement from MermaidMixup.</p>
+            <p>
+                <a class="button is-primary is-large" href="{{ urls.etsy.payWhatYouCanPage }}">Shop on Etsy</a>
+            </p>
+
+            {{ customer_review('Delivery was fast and the product is so lovely and looks very pleasing!! Thank you :))', 'Jessica') }}
+        </div>
+    </div>
+</section>
