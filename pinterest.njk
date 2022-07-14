@@ -19,6 +19,7 @@ permalink: /pinterest.xml
                 <title>{{ listing.title }}</title>
                 <description>{{ listing.description | markdownToPlainText | safe }}</description>
                 <link>{{ site.baseURL }}/listings/{{ listing.listing_id }}</link>
+                <guid>{{ site.baseURL }}/listings/{{ listing.listing_id }}</guid>
                 <media:content url="{{ listing.images[0].url_fullxfull }}" medium="image"/>
             </item>
         {% endfor %}
