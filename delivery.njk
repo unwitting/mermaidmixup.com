@@ -1,0 +1,55 @@
+---
+layout: 'layouts/base.njk'
+title: Delivery
+description: Privacy is important for the queer community. Find out about where we ship, and how your order will arrive.
+ogType: website
+---
+
+{%- from "components/customer_review.njk" import customer_review -%}
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title is-1 is-size-3-mobile">Delivery</h1>
+            <p class="subtitle is-3 is-size-4-mobile">Find out about our privacy-conscious packaging and delivery</p>
+
+            <p>We know that privacy is hugely important to the LGBTQ+ community, especially amongst those not out to the people they live with. Read on to find out how MermaidMixup looks after your order, and what you can expect through the letterbox.</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Plain packaging</h2>
+        </div>
+
+        <div class="columns">
+            <div class="column is-3">
+                <figure class="image is-square ">
+                    <img src="/images/what-will-my-order-look-like.jpg"/>
+                </figure>
+            </div>
+            <div class="column content">
+                <p>First things first, your order will arrive in plain packaging with no additional markings or identifiers beyond your name, address and a stamp.</p>
+                <p>The vast majority of orders are small enough to use an A5 (C5, technically) card-backed envelope.</p>
+                <p>The image here shows you what to expect. <a href="/images/what-will-my-order-look-like.jpg">View at full size &gt;</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 class="title is-3 is-size-4-mobile">Your name</h2>
+            <p>When you place an order, you can enter any name you want to appear on the packaging. Either do this as part of your Etsy postal address, or if that isn't possible, leave a note at checkout asking for the details you want.</p>
+            <p>We'll always make sure to check any notes and will use whatever name you want on the outside of your order: it doesn't matter why. If you need to hide your real name, you want the validation of receiving post in your chosen name, or you're just trying out a new one, it's all valid.</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Destinations</h2>
+            <p>Currently, MermaidMixup ships to the UK only. We're a very small business in Scotland and shipping admin to the US / EU and outside are too much to handle just now, not to mention the environmental impacts of shipping abroad. Watch this space, since this might change, but for now please accept our apologies if you're not here in the UK.</p>
+            <p>Shop local where you can!</p>
+
+            <h2 class="title is-3 is-size-4-mobile">Delivery options</h2>
+
+            {{ customer_review('Stunning, amazing quality, fast delivery 10/10 would order a third time :D', 'Kate') }}
+
+            <p>Delivery in the UK is <strong>free</strong> as standard. This takes the form of Royal Mail 2nd Class.</p>
+            <p>For an additional fee of 50p, you can choose to upgrade to First Class for most of our products.</p>
+            <p>
+                <a class="button is-primary is-large" href="{{ urls.etsy.payWhatYouCanPage }}">Shop on Etsy</a>
+            </p>
+        </div>
+    </div>
+</section>
