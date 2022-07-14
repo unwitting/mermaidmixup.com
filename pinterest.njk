@@ -8,7 +8,7 @@ permalink: /pinterest.xml
     <channel>
         <title>MermaidMixup Pinterest RSS Feed</title>
         <description>Feed for Pinterest bulk updates</description>
-        <link>{{ site.baseURL }}</link>
+        <link>{{ site.baseURL }}/pinterest.xml</link>
         <copyright>{{ build.year }}
             {{ site.domain }}</copyright>
         <lastBuildDate>{{ build.datetime.rfc822 }}</lastBuildDate>
@@ -21,10 +21,9 @@ permalink: /pinterest.xml
                 <description>{{ listing.description | markdownToPlainText | safe }}</description>
                 <link>{{ site.baseURL }}/listings/{{ listing.listing_id }}</link>
                 <image>
-                    <url>{{ listing.images[0].url_570xN }}</url>
-                    <width>570</width>
+                    <url>{{ listing.images[0].url_fullxfull }}</url>
                     <title>Product image for MermaidMixup listing ID {{ listing.listing_id }}</title>
-                    <link>{{ site.baseURL }}</link>
+                    <link>{{ site.baseURL }}/listings/{{ listing.listing_id }}</link>
                 </image>
             </item>
         {% endfor %}
