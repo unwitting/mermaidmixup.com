@@ -2,8 +2,8 @@
 eleventyExcludeFromCollections: true
 permalink: /pinterest.xml
 ---
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
         <title>MermaidMixup Pinterest RSS Feed</title>
         <description>Feed for Pinterest bulk updates</description>
@@ -19,11 +19,7 @@ permalink: /pinterest.xml
                 <title>{{ listing.title }}</title>
                 <description>{{ listing.description | markdownToPlainText | safe }}</description>
                 <link>{{ site.baseURL }}/listings/{{ listing.listing_id }}</link>
-                <image>
-                    <url>{{ listing.images[0].url_fullxfull }}</url>
-                    <title>Product image for MermaidMixup listing ID {{ listing.listing_id }}</title>
-                    <link>{{ site.baseURL }}</link>
-                </image>
+                <media:content url="{{ listing.images[0].url_fullxfull }}" medium="image"/>
             </item>
         {% endfor %}
 
